@@ -8,7 +8,7 @@ public class GameofLifeTest {
     @Test
     public void gameoflife1() {
 
-        GameofLife gameoflife =  new GameofnewLife();
+        GameofLife gameoflife =  new GameofLife();
         Assert.assertEquals(false, gameoflife.step(true,1));
 
     }
