@@ -1544,7 +1544,7 @@ export class GuiModel {
                             "name": { default: "Vorkenntnisse" },
                             "icon": "book",
                             "color": "pumpkin",
-                            "page": "studyProgramPage",
+                            "page": "knowledgePage",
                             "width": 2,
                             "newRow": true,
                         },
@@ -1586,6 +1586,25 @@ export class GuiModel {
                                 "form": "StudyProgramForm"
                             }
                         },
+                    ]
+                },
+                {
+                    "id": "knowledgePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Vorkenntnisse" },
+                            "icon": "fa-th",
+                            "color": "pumpkin",
+                            "width": 2,
+                            "form": {
+                                "form" : "ModuleForm"
+                            }
+                        },
+                        
                     ]
                 },
                 {
