@@ -166,6 +166,42 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "KnowledgeForm",
+                    "title": "Vorkenntnisse",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Bekannte Programmiersprachen",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Weitere Details",
+                            "newRow": true,
+                            "maxlenght": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+
+                    ]
+                },
+
+                {
                     "id": "ModuleForm",
                     "title": "Module",
                     "formFieldList": [
@@ -1596,12 +1632,12 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": { default: "Vorkenntnisse" },
-                            "icon": "fa-th",
+                            "name": { default: "Vorkenntnisse erfassen" },
+                            "icon": "brain",
                             "color": "pumpkin",
                             "width": 2,
                             "form": {
-                                "form" : "ModuleForm"
+                                "form" : "KnowledgeForm"
                             }
                         },
                         
