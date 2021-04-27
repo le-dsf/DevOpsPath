@@ -1578,7 +1578,7 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": { default: "Vorkenntnisse" },
-                            "icon": "book",
+                            "icon": "fa-edit",
                             "color": "pumpkin",
                             "page": "knowledgePage",
                             "width": 2,
@@ -1633,7 +1633,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": { default: "Vorkenntnisse erfassen" },
-                            "icon": "brain",
+                            "icon": "fa-edit",
                             "color": "pumpkin",
                             "width": 2,
                             "form": {
