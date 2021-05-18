@@ -1640,7 +1640,6 @@ export class GuiModel {
                                 "form" : "KnowledgeForm"
                             }
                         },
-                        
                     ]
                 },
                 {
@@ -1659,7 +1658,6 @@ export class GuiModel {
                                 "form" : "ModuleForm"
                             }
                         },
-                        
                     ]
                 },
                 {
