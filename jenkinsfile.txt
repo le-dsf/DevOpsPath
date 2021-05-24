@@ -12,6 +12,7 @@ pipeline {
                 echo 'Build project'
                 sh "chmod +x gradlew"
                 sh "./gradlew build --stacktrace" //run a gradle task
+                step( [ $class: 'JacocoPublisher' ] )
                     }
             }      
         stage('Unit and Integration Test') {
