@@ -13,9 +13,7 @@ pipeline {
                 sh "chmod +x gradlew"
                 sh "./gradlew build --stacktrace" //run a gradle task
                     }
-            }
-                //sh './gradlew clean build'
-         //}       
+            }      
         stage('Test') {
             steps {
                 echo 'Testing..'
