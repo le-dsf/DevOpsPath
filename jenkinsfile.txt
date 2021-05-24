@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             } 
         }    
-        stage('Gradle Build') {
+        stage('Build backend') {
             steps {
                 echo 'Build backend'
                 sh "chmod +x gradlew"
@@ -25,11 +25,12 @@ pipeline {
                 ) 
             }
         }
-        stage('NodeJS Build') {
+        stage('Build frontend') {
             steps { 
                 echo 'Build frontend'
                 nodejs('NodeJS 14.6.0') {
                     sh 'npm install --prefix frontend'
+                    sh 'npm run build --prefix frontend'
                 }
             }
         }
