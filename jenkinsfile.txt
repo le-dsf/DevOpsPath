@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             } 
         }    
-        stage('Build') {
+        stage('Gradle Build') {
             steps {
                 echo 'Build project'
                 sh "chmod +x gradlew"
@@ -23,6 +23,12 @@ pipeline {
                     allowEmptyResults: true,
                     testResults: '**/test-reports/*.xml'
                 ) 
+            }
+        }
+        stage('NodeJS Build') {
+            steps {
+                sh 'npm install'
+
             }
         }
     }
