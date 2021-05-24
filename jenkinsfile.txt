@@ -9,7 +9,11 @@ pipeline {
         }    
         stage('Build') {
             steps {
-                sh './gradlew clean build'
+                 script {
+                    try {
+                        sh './gradlew clean test --no-daemon' //run a gradle task
+                    }
+                //sh './gradlew clean build'
             }
         }
         stage('Test') {
