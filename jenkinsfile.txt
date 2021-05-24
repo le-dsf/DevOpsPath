@@ -26,9 +26,10 @@ pipeline {
             }
         }
         stage('NodeJS Build') {
-            steps {
-                sh 'npm install --prefix frontend'
-
+            steps { 
+                nodejs('NodeJS 14.6.0') {
+                    sh 'npm install --prefix frontend'
+                }
             }
         }
     }
