@@ -18,7 +18,7 @@ pipeline {
         stage('Unit and Integration Test') {
             steps {
                 echo 'Testing..'
-                junit '**/backend/src/test*.xml'
+                junit '**/test-results/test/*.xml'
             }
         }
         stage('Deploy') {
