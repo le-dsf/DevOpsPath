@@ -15,7 +15,7 @@ pipeline {
                 step( [ $class: 'JacocoPublisher' ] )
                     }
             }      
-        stage('Unit and Integration Test') {
+        stage('Unit and integration test') {
             steps {
                 echo 'Testing..'
                 //junit '**/test-results/test/*.xml'
@@ -34,5 +34,17 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
+            }
+            steps {
+                sh 'make publish'
+            }
+        }
+    
+
     }
 }
